@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CounterApp.MainPage"
+             Title="Counters">
+    <Grid RowDefinitions="Auto, *" 
+          Padding="20"
+          >
+        <Button Text="Add New Counter" 
+                Clicked="AddCounterButtonClicked" 
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Grid.Row="0"/>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout x:Name="CounterList"
+                                 Spacing="30"
+                                 Margin="0,40,0,0"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Center"/>
+        </ScrollView>
+    </Grid>
+</ContentPage>
